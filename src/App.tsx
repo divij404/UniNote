@@ -1,26 +1,33 @@
+// src/App.tsx
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-function App() {
+// Page imports
+import LandingPage from './pages/LandingPage';
+import Dashboard from './pages/Dashboard';
+import NotFound from './pages/NotFound';
+import CoursePage from './pages/CoursePage';
+
+// If you add more pages, import them here.
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Landing page (public) */}
+        <Route path="/" element={<LandingPage />} />
+
+        {/* Dashboard page (after login) */}
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/courses/:courseId" element={<CoursePage />} />
+
+        {/* Future: add route for course details, notes, etc. */}
+        {/* <Route path="/courses/:id" element={<CoursePage />} /> */}
+        <Route path="*" element={<NotFound/>} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

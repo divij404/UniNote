@@ -1,0 +1,18 @@
+@keyframes notfound-bg {
+  0% { background-position: 50% 10%; }
+  100% { background-position: 60% 40%; }
+}
+.notfound-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: radial-gradient(circle at 50% 10%, #FFD20044 0%, #fff 100%);
+  color: #2C3E50; /* Fallback primary */
+  font-family: 'Inter, sans-serif';
+  /* Animation: */
+  animation: notfound-bg 10s infinite alternate;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+}
