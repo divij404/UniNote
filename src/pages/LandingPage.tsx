@@ -6,16 +6,17 @@ import FeaturesSection from '../components/landingPage/FeatureSection';
 import HowItWorksSection from '../components/landingPage/HowItWorks';
 import Footer from '../components/nav/Footer';
 
-const LandingPage: React.FC = () => {
-  return (
-    <div>
-      <Navbar />
+const LandingPage: React.FC = () => (
+  <div className="w-full min-h-screen bg-gray-900">
+    <Navbar />
+    <main>
+      {/* Hero fills screen, rest appears on scroll */}
       <HeroSection />
       <FeaturesSection />
       <HowItWorksSection />
-      <Footer />
-    </div>
-  );
-};
+    </main>
+    <Footer />
+  </div>
+);
 
 export default LandingPage;

@@ -1,4 +1,5 @@
 // src/components/FeaturesSection.tsx
+
 import React from 'react';
 import FeatureCard from './FeatureCard';
 
@@ -8,25 +9,17 @@ const featureList = [
   { title: 'Course Collaboration', description: 'Join and share courses with classmates.', emoji: '🤝' },
 ];
 
-const FeaturesSection: React.FC = () => {
-  return (
-    <section
-      id="features"
-      style={{
-        padding: '3rem 2rem',
-        maxWidth: 1200,
-        margin: '0 auto',
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: '2rem',
-        justifyContent: 'space-around',
-      }}
-    >
+const FeaturesSection: React.FC = () => (
+  <section className="w-full px-4 py-14 sm:px-8 max-w-7xl mx-auto">
+    <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-8 text-center">
+      Features
+    </h2>
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {featureList.map(({ title, description, emoji }) => (
         <FeatureCard key={title} emoji={emoji} title={title} description={description} />
       ))}
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default FeaturesSection;

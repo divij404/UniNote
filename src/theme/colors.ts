@@ -1,7 +1,7 @@
 // src/theme/colors.ts
 const uwMadisonColors = {
   primary: '#C5050C',        // Badger Red
-  'primary-dark': '#E3262F', // Lighter red for dark mode
+  'primary_dark': '#E3262F', // Lighter red for dark mode
   secondary: '#FFD200',      // Gold accent
   'secondary-dark': '#FFC107', // Slightly darker gold for dark mode
   background: '#F7F7F7',     // App backgrounds
@@ -16,6 +16,9 @@ const uwMadisonColors = {
   'border-dark': '#4A4A4A',  // Dark mode borders
   accent: '#FFD200',         // For CTAs and highlights
   'accent-dark': '#FFC107',  // Dark mode accent
+
+  icon: '#646569',           // Icons and interactive elements
+  'icon-dark': '#A0A0A0',    // Dark mode icons
 };
 
 export default uwMadisonColors;
